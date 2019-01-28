@@ -3,7 +3,7 @@ package com.example.tema6;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Personas extends AppCompatActivity {
+public class personas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
