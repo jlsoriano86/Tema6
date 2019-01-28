@@ -22,7 +22,7 @@
             app:srcCompat="@drawable/personas" />
 
         <ImageView
-            android:id="@+id/ImagenBloc"
+            android:id="@+id/imagenBloc"
             android:layout_width="250dp"
             android:layout_height="250dp"
             app:srcCompat="@drawable/bloc" />
