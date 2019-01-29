@@ -5,4 +5,5 @@
     <string name="llamar">Llamar</string>
     <string name="correo">Correo</string>
     <string name="editar">Editar</string>
+    <string name="guardarBloc">Guardar</string>
 </resources>
