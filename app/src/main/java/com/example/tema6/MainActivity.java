@@ -15,6 +15,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        personas = (ImageView) findViewById(R.id.imagenPersonas);
+        personas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent personas = new Intent(MainActivity.this, com.example.tema6.personas.class);
+                startActivity(personas);
+            }
+        });
+
+        bloc = (ImageView) findViewById(R.id.imagenBloc);
+        bloc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bloc = new Intent(MainActivity.this, com.example.tema6.bloc.class);
+                startActivity(bloc);
+            }
+        });
+
        
 
     }
