@@ -2,4 +2,7 @@
     <string name="app_name">Tema 6</string>
     <string name="personas">Personas</string>
     <string name="bloc">Bloc de notas</string>
+    <string name="llamar">Llamar</string>
+    <string name="correo">Correo</string>
+    <string name="editar">Editar</string>
 </resources>

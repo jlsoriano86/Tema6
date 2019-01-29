@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opcionCtx1"
+        android:title="@string/llamar" />
+    <item
+        android:id="@+id/opcionCtx2"
+        android:title="@string/correo" />
+    <item
+        android:id="@+id/opcionCtx3"
+        android:title="@string/editar" />
+
+</menu>
