@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">Tema 6</string>
     <string name="personas">Personas</string>
+    <string name="editarPersonas">Editar Personas</string>
     <string name="bloc">Bloc de notas</string>
     <string name="llamar">Llamar</string>
     <string name="correo">Correo</string>
     <string name="editar">Editar</string>
+    <string name="telefono">Nº de teléfono</string>
+    <string name="email">Correo electrónico</string>
+    <string name="hintTelefono">Introduzca el nº de teléfono</string>
+    <string name="hintEmail">Introduzca email</string>
     <string name="guardarBloc">Guardar</string>
+    <string name="btnGuardarDatos">Guardar Datos</string>
 </resources>

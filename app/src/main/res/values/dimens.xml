@@ -2,5 +2,6 @@
 <resources>
     <dimen name= "fotoPersona">200dp</dimen>
     <dimen name= "fotoPersonaHorizontal">160dp</dimen>
+    <dimen name= "fotoEditarPersonaVertical">130dp</dimen>
     <dimen name= "fotoInicio">250dp</dimen>
 </resources>

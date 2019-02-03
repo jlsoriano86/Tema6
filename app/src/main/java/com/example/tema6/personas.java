@@ -1,6 +1,7 @@
 package com.example.tema6;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +22,7 @@ public class personas extends AppCompatActivity {
     ImageView imagen4;
     ImageView imagen5;
     ImageView imagen6;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class personas extends AppCompatActivity {
         registerForContextMenu(imagen4);
         registerForContextMenu(imagen5);
         registerForContextMenu(imagen6);
+
+
     }
 
 
@@ -50,25 +54,30 @@ public class personas extends AppCompatActivity {
         }
         @Override
         public boolean onContextItemSelected(MenuItem item) {
+            preferences = getSharedPreferences("contactos", MODE_PRIVATE);
+            String datos = "";
             switch (item.getItemId()) {
                 case R.id.opcionCtx1:  // Acción a realizar por contextual 1
                     if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                        Intent i42 = new Intent(Intent.ACTION_CALL);
-                        i42.setData(Uri.parse("tel:954112233"));
-                        startActivity(i42);
+                        Intent i1 = new Intent(Intent.ACTION_CALL);
+                        i1.setData(Uri.parse(datos));
+                        startActivity(i1);
                     } else {
                         requestPermissions(new String[]{CALL_PHONE}, 1);
                     }
                     break;
                 case R.id.opcionCtx2:  // Acción a realizar por contextual 2
-                    Intent i41 = new Intent(Intent.ACTION_SEND);
-                    i41.setType("text/plain");
-                    i41.putExtra(Intent.EXTRA_SUBJECT, "Asunto de prueba");
-                    i41.putExtra(Intent.EXTRA_TEXT, "Probando el envío");
-                    i41.putExtra(Intent.EXTRA_EMAIL, new String[]{"mi@email.es"});
-                    startActivity(i41);
+                    Intent i2 = new Intent(Intent.ACTION_SEND);
+                    i2.setType("text/plain");
+                    i2.putExtra(Intent.EXTRA_SUBJECT, "Asunto de prueba");
+                    i2.putExtra(Intent.EXTRA_TEXT, "Probando el envío");
+                    i2.putExtra(Intent.EXTRA_EMAIL, new String[]{datos});
+                    startActivity(i2);
                     break;
                 case R.id.opcionCtx3:  // Acción a realizar por contextual 3
+                    Intent i3 = new Intent (personas.this, com.example.tema6.editarPersonaActivity.class);
+                    startActivity(i3);
+                    break;
             }
             return true;
 
