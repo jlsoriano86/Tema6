@@ -22,9 +22,10 @@
             app:srcCompat="@drawable/personas" />
 
         <ImageView
-            android:id="@+id/ImagenBloc"
+            android:id="@+id/imagenBloc"
             android:layout_width="@dimen/fotoInicio"
             android:layout_height="@dimen/fotoInicio"
             app:srcCompat="@drawable/bloc" />
+
     </LinearLayout>
 </LinearLayout>
