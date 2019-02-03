@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Theme 6</string>
+    <string name="personas">People</string>
+    <string name="editarPersonas">Edit People</string>
+    <string name="bloc">Memo pad</string>
+    <string name="llamar">To call</string>
+    <string name="correo">Mail</string>
+    <string name="editar">Edit</string>
+    <string name="telefono">Phone number</string>
+    <string name="email">Email</string>
+    <string name="hintEmail">Enter the email</string>
+    <string name="hintTelefono">Enter the phone number</string>
+    <string name="guardarBloc">Save</string>
+    <string name="btnGuardarDatos">Save Data</string>
+</resources>
