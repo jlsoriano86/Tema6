@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.menu.MenuBuilder;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -19,6 +20,7 @@ public class bloc extends AppCompatActivity {
         setContentView(R.layout.activity_bloc);
         preferences = getSharedPreferences("preferenciasBloc", MODE_PRIVATE);
         txtBloc = findViewById(R.id.txtBloc);
+        txtBloc.setMovementMethod(new ScrollingMovementMethod());
         txtBloc.setText(preferences.getString("bloc", ""));
     }
 
@@ -39,7 +41,6 @@ public class bloc extends AppCompatActivity {
         m.setOptionalIconsVisible(true);
         return true;
     }
-
 
 
 }
