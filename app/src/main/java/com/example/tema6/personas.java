@@ -118,7 +118,7 @@ public class personas extends AppCompatActivity {
                     if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                         Intent i1 = new Intent(Intent.ACTION_CALL);
                         //datos = preferences.getString(telefono, null);
-                        i1.setData(Uri.parse(datos));
+                        i1.setData(Uri.parse("tel:" + datos));
                         startActivity(i1);
                     } else {
                         requestPermissions(new String[]{CALL_PHONE}, 1);
@@ -140,8 +140,6 @@ public class personas extends AppCompatActivity {
                     break;
             }
             return true;
-
-
 
             }
 }
