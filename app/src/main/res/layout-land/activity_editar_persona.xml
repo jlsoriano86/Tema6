@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".editarPersonaActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imagenEditar1"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos1"
+            app:srcCompat="@drawable/foto1" />
+
+        <ImageView
+            android:id="@+id/imagenEditar2"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos2"
+            app:srcCompat="@drawable/foto2" />
+
+        <ImageView
+            android:id="@+id/imagenEditar3"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos3"
+            app:srcCompat="@drawable/foto3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imagenEditar4"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos4"
+            app:srcCompat="@drawable/foto4" />
+
+        <ImageView
+            android:id="@+id/imagenEditar5"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos5"
+            app:srcCompat="@drawable/foto5" />
+
+        <ImageView
+            android:id="@+id/imagenEditar6"
+            android:layout_width="@dimen/fotoEditarPersonaHorizontal"
+            android:layout_height="@dimen/fotoEditarPersonaHorizontal"
+            android:onClick="guardarDatos6"
+            app:srcCompat="@drawable/foto6" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/telefono" />
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hintTelefono"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/hintEmail"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="guardarDatos"
+            android:text="@string/btnGuardarDatos" />
+
+    </LinearLayout>
+
+</LinearLayout>
