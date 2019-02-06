@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class editarPersonaActivity extends AppCompatActivity {
     ImageView imagen1,imagen2,imagen3,imagen4, imagen5,imagen6;
-    SharedPreferences preferences;
+
     EditText txtTelefono, txtEmail;
     String email = "", telefono = "";
     @Override
@@ -25,15 +25,11 @@ public class editarPersonaActivity extends AppCompatActivity {
         txtTelefono = findViewById(R.id.txtTelefono);
         txtEmail = findViewById(R.id.txtEmail);
 
-
-        txtTelefono = findViewById(R.id.txtTelefono);
-        txtEmail = findViewById(R.id.txtEmail);
-
     }
 
     public void guardarDatos(View view)
     {
-        preferences = getSharedPreferences("contactos", MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("contactos", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(telefono, txtTelefono.getText().toString());
         editor.putString(email, txtEmail.getText().toString());

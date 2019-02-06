@@ -44,7 +44,6 @@
             android:id="@+id/imagenEditar4"
             android:layout_width="@dimen/fotoEditarPersonaVertical"
             android:layout_height="@dimen/fotoEditarPersonaVertical"
-            android:layout_weight="1"
             android:onClick="guardarDatos4"
             app:srcCompat="@drawable/foto4" />
 
@@ -52,7 +51,6 @@
             android:id="@+id/imagenEditar5"
             android:layout_width="@dimen/fotoEditarPersonaVertical"
             android:layout_height="@dimen/fotoEditarPersonaVertical"
-            android:layout_weight="1"
             android:onClick="guardarDatos5"
             app:srcCompat="@drawable/foto5" />
 
@@ -60,7 +58,6 @@
             android:id="@+id/imagenEditar6"
             android:layout_width="@dimen/fotoEditarPersonaVertical"
             android:layout_height="@dimen/fotoEditarPersonaVertical"
-            android:layout_weight="1"
             android:onClick="guardarDatos6"
             app:srcCompat="@drawable/foto6" />
 

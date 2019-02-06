@@ -26,6 +26,7 @@ public class personas extends AppCompatActivity {
     ImageView imagen6;
     SharedPreferences preferences;
     String datos = "";
+    String telefono, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +46,44 @@ public class personas extends AppCompatActivity {
         registerForContextMenu(imagen5);
         registerForContextMenu(imagen6);
 
+        imagen1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+               telefono = "telefono1";
+               email = "email1";
+                return false;
+            }
+        });
+        imagen2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                telefono = "telefono2";
+                email = "email2";
+                return false;
+            }
+        });
+        imagen3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                telefono = "telefono3";
+                email = "email3";
+                return false;
+            }
+        });
+        imagen4.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                telefono = "telefono4";
+                email = "email4";
+                return false;
+            }
+        });
 
         imagen5.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Log.i("MyApp", "Sobre el 5");
+                telefono = "telefono5";
+                email = "email5";
                 return false;
             }
         });
@@ -58,7 +92,8 @@ public class personas extends AppCompatActivity {
         imagen6.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Log.i("MyApp", "Sobre el 6");
+                telefono = "telefono6";
+                email = "email6";
                 return false;
             }
         });
