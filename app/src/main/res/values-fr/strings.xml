@@ -13,4 +13,6 @@
     <string name="hintTelefono">Entrez le numéro de téléphone</string>
     <string name="btnGuardarDatos">Sauvegarder les données</string>
     <string name="guardarBloc">Sauvegarder</string>
+    <string name="telefonoNull">Vous avez besoin d\'un numéro de téléphone</string>
+    <string name="emailNull">Vous avez besoin d\'une adresse email</string>
 </resources>

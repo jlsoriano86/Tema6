@@ -12,4 +12,7 @@
     <string name="hintEmail">Introduzca email</string>
     <string name="guardarBloc">Guardar</string>
     <string name="btnGuardarDatos">Guardar Datos</string>
+    <string name="telefonoNull">Necesita un número de teléfono</string>
+    <string name="emailNull">Necesita una dirección de correo electrónico</string>
+
 </resources>

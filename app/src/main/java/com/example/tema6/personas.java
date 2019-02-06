@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import static android.Manifest.permission.CALL_PHONE;
 
@@ -113,26 +114,34 @@ public class personas extends AppCompatActivity {
 
             preferences = getSharedPreferences("contactos", MODE_PRIVATE);
             switch (item.getItemId()) {
-                case R.id.opcionCtx1:
+                case R.id.opcionCtx1: // Acción a realizar por contextual 1
                     datos = preferences.getString(telefono, null);
-                    if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-                        Intent i1 = new Intent(Intent.ACTION_CALL);
-                        //datos = preferences.getString(telefono, null);
-                        i1.setData(Uri.parse("tel:" + datos));
-                        startActivity(i1);
+                    if (datos == null) {
+                        Toast.makeText(this, getString(R.string.telefonoNull), Toast.LENGTH_SHORT).show();
                     } else {
-                        requestPermissions(new String[]{CALL_PHONE}, 1);
+                        if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                            Intent i1 = new Intent(Intent.ACTION_CALL);
+                            i1.setData(Uri.parse("tel:" + datos));
+                            startActivity(i1);
+                        } else {
+                            requestPermissions(new String[]{CALL_PHONE}, 1);
+                        }
                     }
                     break;
-                case R.id.opcionCtx2:
+                case R.id.opcionCtx2: // Acción a realizar por contextual 2
                     datos = preferences.getString(email, null);
+                    if (datos == null)
+                    {
+                    Toast.makeText(this, getString(R.string.emailNull), Toast.LENGTH_SHORT).show();
+                  }
+                    else{
                     Intent i2 = new Intent(Intent.ACTION_SEND);
                     i2.setType("text/plain");
                     i2.putExtra(Intent.EXTRA_SUBJECT, "Asunto de prueba");
                     i2.putExtra(Intent.EXTRA_TEXT, "Probando el envío");
-                    //datos = preferences.getString(email, null);
                     i2.putExtra(Intent.EXTRA_EMAIL, new String[]{datos});
                     startActivity(i2);
+                }
                     break;
                 case R.id.opcionCtx3:  // Acción a realizar por contextual 3
                     Intent i3 = new Intent (personas.this, com.example.tema6.editarPersonaActivity.class);
