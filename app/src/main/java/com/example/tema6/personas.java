@@ -113,20 +113,24 @@ public class personas extends AppCompatActivity {
 
             preferences = getSharedPreferences("contactos", MODE_PRIVATE);
             switch (item.getItemId()) {
-                case R.id.opcionCtx1:  // Acción a realizar por contextual 1
+                case R.id.opcionCtx1:
+                    datos = preferences.getString(telefono, null);
                     if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                         Intent i1 = new Intent(Intent.ACTION_CALL);
+                        //datos = preferences.getString(telefono, null);
                         i1.setData(Uri.parse(datos));
                         startActivity(i1);
                     } else {
                         requestPermissions(new String[]{CALL_PHONE}, 1);
                     }
                     break;
-                case R.id.opcionCtx2:  // Acción a realizar por contextual 2
+                case R.id.opcionCtx2:
+                    datos = preferences.getString(email, null);
                     Intent i2 = new Intent(Intent.ACTION_SEND);
                     i2.setType("text/plain");
                     i2.putExtra(Intent.EXTRA_SUBJECT, "Asunto de prueba");
                     i2.putExtra(Intent.EXTRA_TEXT, "Probando el envío");
+                    //datos = preferences.getString(email, null);
                     i2.putExtra(Intent.EXTRA_EMAIL, new String[]{datos});
                     startActivity(i2);
                     break;
